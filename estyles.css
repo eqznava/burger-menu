@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?wk2dxv');
+  src:  url('fonts/icomoon.eot?wk2dxv#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?wk2dxv') format('truetype'),
+    url('fonts/icomoon.woff?wk2dxv') format('woff'),
+    url('fonts/icomoon.svg?wk2dxv#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+
+.icon-menu{
+  font-size: 2em;
+}
+
+.header{
+  height: 100px;
+  width: 100%;
+  background-color: cyan;
+  border: 2px solid purple;
+}
+
+.navContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.list{
+  display: flex;
+  list-style-type: none;
+}
+
+.list-li{
+  margin: 1em 3em;
+}
+
+.link{
+  color: purple;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.burger-button{
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  top:5px;
+  color: white;
+}
+
+@media screen and (max-width: 767px){
+
+  .burger-button{
+    display: block;
+  }
+
+  .menu{
+    height: auto;
+    background: rgba(5, 111, 255, 0.5);
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 3s;
+  }
+
+  .menu.is-active{
+    left: 0;
+  }
+}
